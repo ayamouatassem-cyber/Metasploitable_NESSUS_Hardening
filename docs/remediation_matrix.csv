@@ -1,9 +1,9 @@
 Host,Plugin ID,Vulnerability Name,Severity,Initial Status,Remediated Status,Remediation Strategy & Action Taken
+192.168.56.101,20007,SSL Version 2 and 3 Protocol Detection,Critical,Open,Mitigated,Enforced SSLProtocol -ALL +TLSv1 in Apache site configurations to disable insecure legacy SSL protocols.
+192.168.56.101,10008,Bind Shell Backdoor Detection (Port 1524),Critical,Open,Open / Deferred,Flagged intentional legacy root listener. Remediation strategy: Disable inetd service or restrict port 1524 via iptables firewall rules.
+192.168.56.101,138715,Apache Tomcat AJP Connector Request Injection (Ghostcat),Critical,Open,Open / Deferred,Identified vulnerable AJP service on port 8009. Remediation strategy: Disable secretRequired AJP connector or stop tomcat daemon.
 192.168.56.101,11356,NFS Shares World Readable / Exported Share Disclosure,High,Open,Remediated,Modified /etc/exports to remove wildcard  access; restricted mount permissions to specific lab subnet and applied root_squash.
 192.168.56.101,89922,Samba Badlock Vulnerability (CVE-2016-2118),High,Open,Mitigated,Stopped and disabled 'smbd' and 'nmbd' daemons via update-rc.d to close unpatched legacy NetBIOS/SMB attack vectors.
 192.168.56.101,10009,ISC BIND Multiple Vulnerabilities (DNS Server),High / Mixed,Open,Mitigated,Stopped the bind9 service and removed it from system boot scripts to eliminate unnecessary DNS attack surface.
 192.168.56.101,43111,HTTP Methods Allowed (TRACE / TRACK / DELETE),Medium / Mixed,Open,Remediated,Enabled mod_rewrite in Apache2 and configured rewrite rules in apache2.conf to block TRACE/TRACK/PUT/DELETE with 403 Forbidden.
 192.168.56.101,26928,SSL Medium Strength Cipher Suites Supported (SWEET32),High / Medium,Open,Remediated,Updated SSL configuration directives in ports.conf and apache2.conf to enforce SSLCipherSuite HIGH and restrict weak legacy algorithms.
-192.168.56.101,20007,SSL Version 2 and 3 Protocol Detection,Critical,Open,Mitigated,Enforced SSLProtocol -ALL +TLSv1 in Apache site configurations to disable insecure legacy SSL protocols.
-192.168.56.101,10008,Bind Shell Backdoor Detection (Port 1524),Critical,Open,Open / Deferred,Flagged intentional legacy root listener. Remediation strategy: Disable inetd service or restrict port 1524 via iptables firewall rules.
-192.168.56.101,138715,Apache Tomcat AJP Connector Request Injection (Ghostcat),Critical,Open,Open / Deferred,Identified vulnerable AJP service on port 8009. Remediation strategy: Disable secretRequired AJP connector or stop tomcat daemon.
