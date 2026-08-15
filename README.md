@@ -17,10 +17,10 @@ Through targeted system hardening, service reconfigurations, and attack surface 
 
 ### Dashboards Evidence
 * Initial Scan Baseline (68 Vulnerabilities):
-  ![Initial Scan](screenshots/.png)
+  ![Initial Scan](screenshots/first-test.png)
 
 * Post-Remediation Scan (50 Vulnerabilities):
-  ![Post-Remediation Scan](screenshots/post-remediation-50-vulns.png)
+  ![Post-Remediation Scan](screenshots/last-test.png)
 
 ---
 
@@ -64,5 +64,6 @@ Through targeted system hardening, service reconfigurations, and attack surface 
 │   ├── executive-summary.pdf      <-- Formal executive stakeholder report
 │   └── remediation-matrix.csv     <-- Granular technical remediation log
 └── screenshots/
-    ├── initial-scan-68-vulns.png  <-- Initial scan baseline
-    └── post-remediation-50-vulns.png <-- Final post-remediation scan
+    ├── first-test.png  <-- Initial scan baseline
+    ├── last-test.png <-- Final post-remediation scan
+    └── terminal-evidence/         <-- Step-by-step terminal captures (NFS, Apache, Samba, BIND)
