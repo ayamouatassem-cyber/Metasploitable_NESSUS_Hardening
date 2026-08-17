@@ -66,4 +66,4 @@ Through targeted system hardening, service reconfigurations, and attack surface 
 └── screenshots/
     ├── first-test.png  <-- Initial scan baseline
     ├── last-test.png <-- Final post-remediation scan
-    └── terminal-evidence/         <-- Step-by-step terminal captures (NFS, Apache, Samba, BIND)
+    └── ...
